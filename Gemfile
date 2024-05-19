@@ -60,12 +60,12 @@ end
 
 group :development do
   gem "web-console"
-  gem 'pry'
   gem 'faker'
   gem 'factory_bot_rails'
 end
 
 group :test do
+  gem 'pry'
   gem 'capybara' 
   gem 'launchy' 
   gem 'rspec-rails'

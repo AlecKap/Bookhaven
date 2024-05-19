@@ -36,3 +36,7 @@
 /node_modules
 
 /config/application.yml
+
+/spec/fixtures/vcr_cassettes
+
+/coverage

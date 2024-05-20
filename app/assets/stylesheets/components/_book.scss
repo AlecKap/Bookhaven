@@ -1,0 +1,54 @@
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-s);
+  font-size: var(--font-size-xl);
+  background-color: var(--color-n-background);
+  color: var(--color-primary-dark);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-small);
+
+  @include media(tabletAndUp) {
+    padding: var(--space-xs) var(--space-m);
+  }
+  
+  &_cover_image {
+    width: 100%;
+    height: auto;
+    display: contents;
+  }
+
+  &_details {
+    margin-bottom: var(--space-m);
+    margin-left: var(--space-xxxl);
+    margin-right: var(--space-xxxl);
+
+    &_title {
+      font-size: var(--font-size-xxl);
+      font-weight: bold;
+    }
+
+    &_author {
+      font-size: var(--font-size-l);
+    }
+
+    &_genre {
+      font-size: var(--font-size-l);
+    }
+
+    &_description {
+      font-size: var(--font-size-l);
+    }
+  }
+
+  // future actions include adding to user library/bookshelf
+  &_actions {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    align-self: flex-start;
+    gap: var(--space-xs);
+  }
+}

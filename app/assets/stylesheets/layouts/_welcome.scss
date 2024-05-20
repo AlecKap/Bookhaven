@@ -1,0 +1,25 @@
+.welcome {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+
+  @include media(tabletAndUp) {
+    padding-right: var(--space-xs);
+    padding-left: var(--space-xs);
+    max-width: 60rem;
+  }
+
+  &__grass {
+    bottom: 100px;
+    position: fixed;
+    width: 100vw;
+    height: 125px;
+    z-index: -1;
+  }
+  
+  &__library {
+    margin-top: 50px;
+    height: 100%;
+  }
+}

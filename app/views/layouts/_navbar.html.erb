@@ -1,0 +1,21 @@
+<header class="navbar">
+  <% if user_signed_in? %>
+    <div class="navbar__name">
+      Hello, &nbsp;<%= current_user.name %>!
+    </div>
+    <div class="navbar__title">
+      <h4><%= link_to "BookHaven", root_path %></h4>
+    </div>
+    <%= button_to "Sign out",
+                  destroy_user_session_path,
+                  method: :delete,
+                  class: "btn btn--dark" %>
+  <% else %>
+    <div class="navbar__title">
+      <h4>BookHaven</h4>
+    </div>
+    <%= link_to "Sign in",
+                new_user_session_path,
+                class: "btn btn--dark navbar__right" %>
+  <% end %>
+</header>

@@ -1,7 +1,7 @@
 <header class="navbar">
   <% if user_signed_in? %>
     <div class="navbar__name">
-      Hello, &nbsp;<%= current_user.name %>!
+      Hello, &nbsp;<%= current_user.email %>!
     </div>
     <div class="navbar__title">
       <h4><%= link_to "BookHaven", root_path %></h4>

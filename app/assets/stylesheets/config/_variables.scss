@@ -1,0 +1,71 @@
+:root {
+  // Simple fonts
+  --font-family-sans: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-family-sans: Georgia, serif;
+
+  // Classical line heights
+  --line-height-headers: 1.1;
+  --line-height-body:    1.5;
+
+  // Classical and robust font sizes system
+  --font-size-xs: 0.75rem;    // 12px
+  --font-size-s: 0.875rem;    // 14px
+  --font-size-m: 1rem;        // 16px
+  --font-size-l: 1.125rem;    // 18px
+  --font-size-xl: 1.25rem;    // 20px
+  --font-size-xxl: 1.5rem;    // 24px
+  --font-size-xxxl: 2rem;     // 32px
+  --font-size-xxxxl: 2.5rem;  // 40px
+  --font-size-xxxxxl: 4rem;   // 64px
+  --font-size-xxxxxxl: 6rem;  // 96px
+
+  // Three different text colors
+  --color-text-header:       #9fe1ff;
+  --color-text-body:         #3c3939;
+  --color-text-muted:        rgba(71, 70, 70, 0.715);
+
+  // Classical and robust spacing system
+  --space-xxxxs: 0.125rem; // 2px
+  --space-xxxs: 0.25rem;   // 4px
+  --space-xxs: 0.375rem;   // 6px
+  --space-xs: 0.5rem;      // 8px
+  --space-s: 0.75rem;      // 12px
+  --space-m: 1rem;         // 16px
+  --space-l: 1.5rem;       // 24px
+  --space-xl: 2rem;        // 32px
+  --space-xxl: 2.5rem;     // 40px
+  --space-xxxl: 3rem;      // 48px
+  --space-xxxxl: 4rem;     // 64px
+  --space-xxxxxl: 6rem;    // 96px
+  --space-xxxxxxl: 8rem;   // 128px
+
+  // Application colors
+  --color-primary-light:         #9fe1ff;
+  --color-primary-dark:          #2d1601;
+  --color-primary-rotate:        #2a2828;
+  --color-primary-link-rotate:   #25baff;
+  --color-primary-bg:            #e6be58;
+  --color-secondary:             #3c3939;
+  --color-secondary-rotate:      #ddf4fe;
+  --color-tertiary:              #9119cc;
+  --color-glint:                 #00aeff;
+
+  // Neutral colors
+  --color-n-white:             hsl(0, 0%, 100%);
+  --color-n-background:        #fefbed;
+  --color-navbar-background:   hsl(0, 0%, 93%);
+
+  // Border radius
+  --border-radius: .75rem;
+
+  // Border
+  --border: solid 2px var(--color-light);
+
+  // Shadows
+  --shadow-large:  3px 5px 10px hsla(0, 0%, 0%, 0.408);
+  --shadow-small:  2px 4px 8px  hsla(0, 0%, 0%, 0.382);
+  --shadow-button: 1px 2px 5px  hsla(0, 0%, 0%, 0.335);
+  --text-shaddow-large:  2px 2px 3px  hsla(0, 0%, 0%, 0.389);
+  --text-shaddow-small:  .5px .5px 1px  hsla(0, 0%, 0%, 0.389);
+  --text-shaddow-x-small:  .25px .25px .5px  hsla(0, 0%, 0%, 0.582);
+}

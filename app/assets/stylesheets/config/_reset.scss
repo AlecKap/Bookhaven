@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  background-color: var(--color-primary-light);
+  color: var(--color-text-body-dark);
+  line-height: var(--line-height-body);
+  font-family: var(--font-family-sans);
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-body-dark);
+  line-height: var(--line-height-headers);
+}
+
+h1 {
+  font-size: var(--font-size-xxxl);
+  // text-shadow: var(--text-shaddow-large);
+  // text-align: center;
+}
+
+h2 {
+  font-size: var(--font-size-xxxl);
+  align-items: center;
+}
+
+h3 {
+  font-size: var(--font-size-xxl);
+  text-shadow: var(--text-shaddow-small);
+  align-items: center;
+  color: var(--color-text-body-dark)
+}
+
+h4 {
+  font-size: var(--font-size-xxl);
+  text-shadow: var(--text-shaddow-small);
+}
+
+a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: color 200ms;
+  font-weight: bold;
+  overflow: scroll;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--color-primary-link-rotate);
+  }
+}

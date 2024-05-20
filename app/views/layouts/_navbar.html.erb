@@ -4,7 +4,7 @@
       Hello, &nbsp;<%= current_user.email %>!
     </div>
     <div class="navbar__title">
-      <h4><%= link_to "BookHaven", root_path %></h4>
+      <img src="/bookhaven_logo.png" alt="bookhaven" >
     </div>
     <%= button_to "Sign out",
                   destroy_user_session_path,
@@ -12,7 +12,7 @@
                   class: "btn btn--dark" %>
   <% else %>
     <div class="navbar__title">
-      <h4>BookHaven</h4>
+      <img src="/bookhaven_logo.png" alt="bookhaven" >
     </div>
     <%= link_to "Sign in",
                 new_user_session_path,

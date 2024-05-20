@@ -31,6 +31,7 @@
     }
 
     &_author {
+      font-weight: bold;
       font-size: var(--font-size-l);
     }
 
@@ -39,7 +40,7 @@
     }
 
     &_description {
-      font-size: var(--font-size-l);
+      font-size: var(--font-size-m);
     }
   }
 

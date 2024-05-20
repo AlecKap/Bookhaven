@@ -10,10 +10,11 @@
 
 // Layouts
 @import "layouts/container";
+@import "layouts/log_in";
+@import "layouts/sign_up";
+@import "layouts/welcome";
 
 // Components
 @import "components/book";
 @import "components/navbar";
 @import "components/btn";
-@import "components/log_in";
-@import "components/sign_up";

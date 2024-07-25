@@ -12,6 +12,9 @@
 
   <body>
     <%= render "layouts/navbar" unless current_page?(new_user_session_path) %>
+    <% flash.each do |type, message| %>
+      <p><%= message %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

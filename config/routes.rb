@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root to: "welcome#index"
 
   resources :books, only: [:show]
+  resources :libraries, only: [:index]
 end

@@ -1,7 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+puts "Seeding Data"
+sleep(1)
+puts "."
+sleep(1)
+puts ".."
+sleep(1)
+puts "..."
+
+# Libraries
+
+sleep(1)
+Library.destroy_all
+
+10.times do
+  Library.create(
+    name: Faker::Company.name,
+    address: Faker::Address.street_address,
+    city: Faker::Address.city,
+    state: Faker::Address.state_abbr,
+    zip_code: Faker::Address.zip_code,
+    charter_number: Faker::Number.number(digits: 10)
+    )
+end
+
+puts "10 Libraries Created"

@@ -7,7 +7,7 @@ class Library < ApplicationRecord
     "#{address}, #{city}, #{state} #{zip_code}"
   end
 
-  def number_of_books
+  def num_of_books
     books.count
   end
 end

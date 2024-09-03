@@ -127,7 +127,7 @@
     &:focus-within,
     &:active {
       color: var(--color-primary-dark);
-      filter: saturate(1) brightness(125%);
+      filter: saturate(1) brightness(110%);
     }
   }
 }

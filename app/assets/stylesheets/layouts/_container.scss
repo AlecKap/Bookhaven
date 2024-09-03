@@ -4,6 +4,9 @@
   padding-left: var(--space-s);
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include media(tabletAndUp) {
     padding-right: var(--space-xs);

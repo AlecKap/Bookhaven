@@ -1,0 +1,25 @@
+.library {
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, var(--color-n-background-dark), var(--color-n-background));
+  color: var(--color-logo-brown);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-small);
+  padding: var(--space-xs) var(--space-m);
+  height: auto;
+  margin-bottom: var(--space-m);
+  font-weight: bold;
+  font-size: var(--font-size-m);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-xs);
+
+  &:hover,
+    &:focus,
+    &:focus-within,
+    &:active {
+      color: var(--color-primary-dark);
+      filter: saturate(1) brightness(110%);
+    }
+}

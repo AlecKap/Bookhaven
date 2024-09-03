@@ -1,7 +1,12 @@
 .welcome_description {
+  padding: var(--space-xl);
   font-size: var(--font-size-xxl);
+  background-color: var(--color-n-background);
   color: var(--color-primary-dark);
   line-height: var(--line-height-headers);
   margin-top: var(--space-xl);
+  margin-right: 5%;
+  margin-left: 5%;
+  border-radius: var(--border-radius);
   text-align: center;
 }

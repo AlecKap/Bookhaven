@@ -1,0 +1,13 @@
+<div class="library">
+  <%= link_to library_path(library) do %>
+    <div class="library_name">
+      <%= library.name %>
+    </div>
+    <div class="library_full_address">
+      <%= library.full_address %>
+    </div>
+    <div class="num_of_books">
+    Number of Books: <%= library.num_of_books %>
+    </div>
+  <% end %>
+</div>

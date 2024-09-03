@@ -24,7 +24,7 @@ RSpec.describe Library, type: :model do
         library.books << book1
         library.books << book2
 
-        expect(library.number_of_books).to eq(2)
+        expect(library.num_of_books).to eq(2)
         expect(LibraryBook.count).to eq(2)
         expect(LibraryBook.first.book).to eq(book1)
         expect(LibraryBook.last.book).to eq(book2)

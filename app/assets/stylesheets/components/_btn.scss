@@ -113,55 +113,21 @@
       content: "cancel";
     }
   }
-
-  &--submit-for-date {
-    height: 45px;
-    width: 45px;
-    color: rgb(105, 167, 12);
-    background-color: var(--color-background-light);
-    border: solid 0px transparent;
-    border-radius: .75rem;
-    padding-bottom: 1px;
-
-    &:hover,
-    &:focus,
-    &:focus-within,
-    &:active {
-      filter: saturate(1.2) brightness(70%);
-      content: "cancel";
-    }
-  }
-
-  &--submit-for-desc {
-    padding: var(--space-xxs) var(--space-m);
-    margin-top: var(--space-xs);
-    color: var(--color-light);
+  
+  &--welcome {
+    text-align: center;
+    padding: var(--space-xs) var(--space-m);
+    font-size: var(--font-size-xxl);
+    color: var(--color-logo-brown);
     box-shadow: var(--shadow-button);
-    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-rotate));
-
+    background-image: linear-gradient(to right, var(--color-n-background-dark), var(--color-n-background));
+    
     &:hover,
     &:focus,
     &:focus-within,
     &:active {
-      color: var(--color-white);
-      filter: saturate(1.8) brightness(125%);
-    }
-  }
-
-  &--submit-for-event {
-    height: 45px;
-    width: 45px;
-    color: rgb(105, 167, 12);
-    background-color: var(--color-background-light);
-    border: solid 0px transparent;
-    border-radius: .75rem;
-
-    &:hover,
-    &:focus,
-    &:focus-within,
-    &:active {
-      filter: saturate(1.2) brightness(70%);
-      content: "cancel";
+      color: var(--color-primary-dark);
+      filter: saturate(1) brightness(125%);
     }
   }
 }

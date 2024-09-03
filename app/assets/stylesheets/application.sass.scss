@@ -18,7 +18,8 @@
 @import "components/book";
 @import "components/navbar";
 @import "components/btn";
-@import "components/grass_img";
-@import "components/little_library";
-@import "components/welcome_title";
-@import "components/welcome_description";
+@import "components/welcome_scss/grass_img";
+@import "components/welcome_scss/little_library";
+@import "components/welcome_scss/welcome_title";
+@import "components//welcome_scss/welcome_description";
+@import "components//welcome_scss/welcome_actions";

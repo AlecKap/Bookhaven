@@ -1,0 +1,9 @@
+.welcome_actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+  .btn {
+    margin: 1rem;
+  }
+}

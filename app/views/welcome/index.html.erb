@@ -1,10 +1,10 @@
 <main class="welcome">
-  <h1>Welcome to BookHaven!</h1>
-
-  <div class="welcome__library">
-    <img src="/library.png" alt="library" >  
+  <div class="welcome_title">
+    Welcome!
   </div>
-  <div class="welcome__grass">
-    <img src="/grass.png" alt="Grass" >  
+  <div class="welcome_actions">
+    <%= render partial: "welcome/welcome_actions" %>
   </div>
+  <img class="little_library" src="/library.png" alt="library" >  
+  <img src="/grass.png" alt="Grass" class="grass_img" >  
 </main>

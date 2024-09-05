@@ -37,6 +37,7 @@ button,
 textarea,
 select {
   font: inherit;
+  border-radius: var(--border-radius);
 }
 
 h1,

@@ -1,7 +1,7 @@
 <header class="navbar">
   <% if user_signed_in? %>
     <div class="navbar__name">
-      Hello, &nbsp;<%= current_user.email %>!
+      Hello, &nbsp;<%= current_user.first_name %>!
     </div>
     <div class="navbar__title">
       <%= link_to image_tag("/bookhaven_logo.png", alt: "bookhaven"), root_path %>

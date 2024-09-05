@@ -79,24 +79,6 @@
     }
   }
   
-  &--cancel {
-    height: 45px;
-    width: 45px;
-    padding-bottom: var(--space-xxs);
-    color: var(--color-light);
-    background-color: var(--color-background-light);
-    border: solid 0px transparent;
-    border-radius: .75rem;
-
-    &:hover,
-    &:focus,
-    &:focus-within,
-    &:active {
-      filter: saturate(1.2) brightness(70%);
-      content: "cancel";
-    }
-  }
-  
   &--submit {
     height: 45px;
     width: 45px;
@@ -121,6 +103,23 @@
     color: var(--color-logo-brown);
     box-shadow: var(--shadow-button);
     background-image: linear-gradient(to right, var(--color-n-background-dark), var(--color-n-background));
+    
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:active {
+      color: var(--color-primary-dark);
+      filter: saturate(1) brightness(110%);
+    }
+  }
+  
+  &--cancel {
+    text-align: center;
+    padding: var(--space-xxxs) var(--space-xxs);
+    font-size: var(--font-size-s);
+    color: var(--color-n-white);
+    box-shadow: var(--shadow-button);
+    background-color: var(--color-danger);
     
     &:hover,
     &:focus,

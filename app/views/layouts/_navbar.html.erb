@@ -6,10 +6,16 @@
     <div class="navbar__title">
       <%= link_to image_tag("/bookhaven_logo.png", alt: "bookhaven"), root_path %>
     </div>
-    <%= button_to "Sign out",
-                  destroy_user_session_path,
-                  method: :delete,
-                  class: "btn btn--dark" %>
+    <div class="navbar__actions">
+      <%= link_to "My Account",
+                    edit_user_registration_path,
+                    method: :get,
+                    class: "btn btn--dark" %>
+      <%= button_to "Sign out",
+                    destroy_user_session_path,
+                    method: :delete,
+                    class: "btn btn--dark" %>
+    </div>
   <% else %>
     <div class="navbar__title">
       <img src="/bookhaven_logo.png" alt="bookhaven" >

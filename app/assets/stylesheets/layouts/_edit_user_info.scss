@@ -1,0 +1,26 @@
+.edit_user_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  padding-right: var(--space-xs);
+  padding-left: var(--space-xs);
+  padding-bottom: var(--space-m);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(tabletAndUp) {
+    padding-right: var(--space-m);
+    padding-left: var(--space-m);
+    max-width: 60rem;
+  }
+
+  &__form_inputs {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    align-self: flex-start;
+  }
+}

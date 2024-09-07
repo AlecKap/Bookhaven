@@ -1,5 +1,5 @@
 class GoogleBooksService
-
+  
   def books_by_isbn(isbn)
     get_url("?q=isbn:#{isbn}")
   end

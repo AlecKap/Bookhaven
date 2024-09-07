@@ -3,11 +3,13 @@
     <div class="library_name">
       <%= library.name %>
     </div>
-    <div class="library_full_address">
-      <%= library.full_address %>
-    </div>
-    <div class="num_of_books">
-    Number of Books: <%= library.num_of_books %>
-    </div>
   <% end %>
+
+  <div class="num_of_books">
+    Number of Books: <%= library.num_of_books %>
+  </div>
+  
+  <div class="directions_link">
+    <%= link_to "Get Directions", libraries_path %>
+  </div>
 </div>

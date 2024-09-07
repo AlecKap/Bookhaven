@@ -1,55 +1,46 @@
 .book {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  gap: var(--space-s);
   font-size: var(--font-size-xl);
   background-color: var(--color-n-background);
-  color: var(--color-primary-dark);
+
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-small);
 
-  @include media(tabletAndUp) {
-    padding: var(--space-xs) var(--space-m);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  .book__title {
+    font-size: 1.2em;
+    font-weight: bold;
   }
   
-  &_cover_image {
-    width: 100%;
-    height: auto;
-    display: contents;
+  .book__author {
+    font-size: 1em;
   }
-
-  &_details {
-    margin-bottom: var(--space-m);
-    margin-left: var(--space-xxxl);
-    margin-right: var(--space-xxxl);
-
-    &_title {
-      font-size: var(--font-size-xxl);
-      font-weight: bold;
-    }
-
-    &_author {
-      font-weight: bold;
-      font-size: var(--font-size-l);
-    }
-
-    &_genre {
-      font-size: var(--font-size-l);
-    }
-
-    &_description {
-      font-size: var(--font-size-m);
-    }
+  
+  .book__description {
+    font-size: 0.8em;
   }
 
   // future actions include adding to user library/bookshelf
-  &_actions {
+  .book__actions {
     display: flex;
-    align-items: center;
-    flex: 0 0 auto;
-    align-self: flex-start;
-    gap: var(--space-xs);
+    justify-content: space-between;
+    .btn {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
   }
 }

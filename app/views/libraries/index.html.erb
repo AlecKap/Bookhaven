@@ -1,5 +1,7 @@
 <main class="container">
-  <% @libraries.each do |library| %>
-    <%= render 'library', library: library %>
-  <% end %>
+  <div class="libraries">
+    <% @libraries.each do |library| %>
+      <%= render 'library', library: library %>
+    <% end %>
+  </div>
 </main>

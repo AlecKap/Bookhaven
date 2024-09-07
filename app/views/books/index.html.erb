@@ -1,3 +1,15 @@
 <main class="container">
   Soon, you'll be able to search for books here!
+  <div class="books">
+  <% @books.each do |book| %>
+      <div class="book">
+        <h2><%= book.title %></h2>
+        <p>By: <%= book.author %></p>
+      </div>
+    <% end %>
+  </div>
 </main>
+
+<!--
+<input type="file" accept="image/*" capture="camera" id="cameraInput">
+-->

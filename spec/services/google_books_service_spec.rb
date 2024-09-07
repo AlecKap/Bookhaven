@@ -23,7 +23,6 @@ RSpec.describe GoogleBooksService do
         expect(book_data[:items].first[:volumeInfo][:authors]).to be_an(Array)
         expect(book_data[:items].first[:volumeInfo][:description]).to be_a(String)
         expect(book_data[:items].first[:volumeInfo][:imageLinks]).to be_a(Hash) 
-         binding.pry
       end
 
       it 'returns book data by isbn10', :vcr do
@@ -46,8 +45,6 @@ RSpec.describe GoogleBooksService do
         expect(book_data[:items].first[:volumeInfo][:authors]).to be_an(Array)
         expect(book_data[:items].first[:volumeInfo][:description]).to be_a(String)
         expect(book_data[:items].first[:volumeInfo][:imageLinks]).to be_a(Hash)
-
-        binding.pry
       end
     end
   end

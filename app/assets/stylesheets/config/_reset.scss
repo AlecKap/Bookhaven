@@ -84,7 +84,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: var(--color-primary-rotate);
+    color: var(--color-primary-link-rotate);
     filter: saturate(1) brightness(110%);
   }
 }

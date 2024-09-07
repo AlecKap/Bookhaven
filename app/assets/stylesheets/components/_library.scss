@@ -1,25 +1,55 @@
 .library {
-  flex-direction: column;
-  justify-content: space-between;
-  background-image: linear-gradient(to right, var(--color-n-background-dark), var(--color-n-background));
-  color: var(--color-logo-brown);
+  align-items: center;
+  font-size: var(--font-size-xl);
+  background-color: var(--color-n-background);
+
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-small);
-  padding: var(--space-xs) var(--space-m);
-  height: auto;
-  margin-bottom: var(--space-m);
-  font-weight: bold;
-  font-size: var(--font-size-m);
-  display: flex;
-  align-items: center;
-  text-align: center;
-  gap: var(--space-xs);
 
-  &:hover,
-    &:focus,
-    &:focus-within,
-    &:active {
-      color: var(--color-primary-dark);
-      filter: saturate(1) brightness(110%);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  .library__name {
+    align-items: center;
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+  }
+  
+  .library__full_address {
+    font-size: 1em;
+  }
+
+  .directions_link {
+    font-size: var(--font-size-m);
+    color: var(--color-glint);
+    &:hover {
+      text-decoration: underline;
     }
+  }
+  
+  .num_of_books {
+    font-weight: bold;
+    font-size: var(--font-size-m);
+  }
+
+  // future actions include adding to user library/bookshelf
+  .library__actions {
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
 }

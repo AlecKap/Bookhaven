@@ -148,12 +148,3 @@ LibraryBook.create(library_id: library_9.id, book_id: book_19.id, quality: Faker
 LibraryBook.create(library_id: library_10.id, book_id: book_20.id, quality: Faker::Number.between(from: 1, to: 5))
 
 puts "20 LibraryBooks Created"
-# create_table "library_books", force: :cascade do |t|
-#   t.bigint "library_id", null: false
-#   t.bigint "book_id", null: false
-#   t.integer "quality"
-#   t.datetime "created_at", null: false
-#   t.datetime "updated_at", null: false
-#   t.index ["book_id"], name: "index_library_books_on_book_id"
-#   t.index ["library_id"], name: "index_library_books_on_library_id"
-# end

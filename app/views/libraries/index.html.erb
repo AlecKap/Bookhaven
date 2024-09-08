@@ -1,4 +1,9 @@
 <main class="container">
+  <div class="add_library">
+    <%= link_to "Add an New Library",
+                new_library_path, 
+                class: 'btn btn--secondary' %>
+  </div>
   <div class="libraries">
     <% @libraries.each do |library| %>
       <%= render 'library', library: library %>

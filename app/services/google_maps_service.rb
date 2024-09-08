@@ -4,7 +4,7 @@ class GoogleMapsService
   end
 
   def get_coordinates
-    get_url("?address=#{@address}")
+    get_url("?address=#{@address}")[:results].first[:geometry][:location]
   end
 
   private

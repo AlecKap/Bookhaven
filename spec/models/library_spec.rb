@@ -6,6 +6,16 @@ VCR.turned_off do
     describe 'validations' do
       it { should have_many(:library_books) }
       it { should have_many(:books).through(:library_books) }
+      sleep(1)
+      it { should validate_presence_of(:name) }
+      it { should validate_presence_of(:address) }
+      it { should validate_presence_of(:city) }
+      it { should validate_presence_of(:state) }
+      sleep(1)
+      it { should validate_length_of(:name).is_at_most(100) }
+      it { should validate_length_of(:address).is_at_most(100) }
+      it { should validate_length_of(:city).is_at_most(50) }
+
     end
 
     describe 'instance methods' do

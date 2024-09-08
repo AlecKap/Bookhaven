@@ -7,7 +7,7 @@ class Library < ApplicationRecord
   validates :city, presence: true, length: { maximum: 50 }
   validates :state, presence: true
 
-  after_create :update_coordinates
+  before_create :update_coordinates
 
   def full_address
     "#{address}, #{city}, #{state} #{zip_code}"

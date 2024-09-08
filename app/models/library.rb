@@ -2,6 +2,11 @@ class Library < ApplicationRecord
   has_many :library_books
   has_many :books, through: :library_books
 
+  validates :name, presence: true, length: { maximum: 100 }
+  validates :address, presence: true, length: { maximum: 100 }
+  validates :city, presence: true, length: { maximum: 50 }
+  validates :state, presence: true
+
   after_create :update_coordinates
 
   def full_address

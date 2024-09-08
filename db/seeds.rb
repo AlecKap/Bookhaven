@@ -51,40 +51,38 @@ library_5 = Library.create( name: Faker::Company.name,
                             zip_code: Faker::Address.zip_code,
                             charter_number: Faker::Number.number(digits: 10))
 
-library_6 = Library.create( name: Faker::Company.name,
-                            address: Faker::Address.street_address,
-                            city: Faker::Address.city,
-                            state: Faker::Address.state_abbr,
+library_6 = Library.create( name: "Lulu's little library",
+                            address: "3605 W Berry Ave",
+                            city: "Littleton",
+                            state: "CO",
+                            charter_number: Faker::Number.number(digits: 10))
+
+library_7 = Library.create( name: "Little Rainbow Library",
+                            address: "985 W 11th Ct",
+                            city: "Broomfield",
+                            state: "CO",
                             zip_code: Faker::Address.zip_code,
                             charter_number: Faker::Number.number(digits: 10))
 
-library_7 = Library.create( name: Faker::Company.name,
-                            address: Faker::Address.street_address,
-                            city: Faker::Address.city,
-                            state: Faker::Address.state_abbr,
-                            zip_code: Faker::Address.zip_code,
+library_8 = Library.create( name: "Kay Davis",
+                            address: "885 Marble Street",
+                            city: "Broomfield",
+                            state: "CO",
                             charter_number: Faker::Number.number(digits: 10))
 
-library_8 = Library.create( name: Faker::Company.name,
-                            address: Faker::Address.street_address,
-                            city: Faker::Address.city,
-                            state: Faker::Address.state_abbr,
-                            zip_code: Faker::Address.zip_code,
+library_9 = Library.create( name: "Oak Street Library",
+                            address: "2873 Miramonte Blvd",
+                            city: "Broomfield",
+                            state: "CO",
+                            zip_code: "80020",
                             charter_number: Faker::Number.number(digits: 10))
 
-library_9 = Library.create( name: Faker::Company.name,
-                            address: Faker::Address.street_address,
-                            city: Faker::Address.city,
-                            state: Faker::Address.state_abbr,
-                            zip_code: Faker::Address.zip_code,
-                            charter_number: Faker::Number.number(digits: 10))
-
-library_10 = Library.create(name: Faker::Company.name,
-                            address: Faker::Address.street_address,
-                            city: Faker::Address.city,
-                            state: Faker::Address.state_abbr,
-                            zip_code: Faker::Address.zip_code,
-                            charter_number: Faker::Number.number(digits: 10))
+library_10 = Library.create(name: "Broomfield Depot Museum Museum Manager",
+                            address: "2201 W. 10th Ave.",
+                            city: "Broomfield",
+                            state: "CO",
+                            zip_code: "80020",
+                            charter_number: "66632")
 
 library_11 = Library.create(name: "Test Library",
                             address: "2170 west 10th ave",

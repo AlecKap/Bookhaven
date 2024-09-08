@@ -1,4 +1,4 @@
-.book {
+.book_details {
   align-items: center;
   font-size: var(--font-size-xl);
   background-color: var(--color-n-background);
@@ -9,27 +9,26 @@
   margin: 10px;
   padding: 10px;
   border: 1px solid #ccc;
-  width: 200px;
-  height: 300px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   
-  .book__title {
-    font-size: 1.2em;
+  &_title {
+    font-size: var(--font-size-xxxxxl);
     font-weight: bold;
   }
   
-  .book__author {
+  &_author {
     font-size: 1em;
   }
   
-  .book__description {
-    font-size: 0.8em;
+  &_description {
+    font-size: var(--font-size-xl);
   }
 
   // future actions include adding to user library/bookshelf
-  .book__actions {
+  &_actions {
     display: flex;
     justify-content: space-between;
     .btn {

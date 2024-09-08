@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get 'about/index', to: 'about#index', as: 'about'
 
   resources :books, only: [:show, :index]
-  resources :libraries, only: [:index, :show]
+  resources :libraries, only: [:index, :show, :new, :create]
 end

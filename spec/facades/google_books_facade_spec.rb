@@ -7,7 +7,7 @@ RSpec.describe GoogleBooksFacade do
        isbn = '9780061120084'
        facade = GoogleBooksFacade.new(isbn)
        book_details = facade.book_details
-       
+     
        expect(book_details).to be_a(Hash)
 
        expect(book_details).to have_key(:title)

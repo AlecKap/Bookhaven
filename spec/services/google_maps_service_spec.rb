@@ -9,16 +9,12 @@ RSpec.describe GoogleMapsService do
         coordinates = service.get_coordinates
 
         expect(coordinates).to be_a(Hash)
-        expect(coordinates).to have_key(:results)
+        
+        expect(coordinates).to have_key(:lat)
+        expect(coordinates).to have_key(:lng)
 
-        expect(coordinates[:results]).to be_an(Array)
-        expect(coordinates[:results].first).to have_key(:geometry)
-        expect(coordinates[:results].first[:geometry]).to have_key(:location)
-        expect(coordinates[:results].first[:geometry][:location]).to have_key(:lat)
-        expect(coordinates[:results].first[:geometry][:location]).to have_key(:lng)
-
-        expect(coordinates[:results].first[:geometry][:location][:lat]).to be_a(Float)
-        expect(coordinates[:results].first[:geometry][:location][:lng]).to be_a(Float)
+        expect(coordinates[:lat]).to be_a(Float)
+        expect(coordinates[:lng]).to be_a(Float)
       end
     end
   end

@@ -19,6 +19,10 @@ VCR.turned_off do
     end
 
     describe 'instance methods' do
+      # before :each do
+      #   sleep(1)
+      # end
+
       describe '#full_address' do
         it 'returns the full address of the library' do
           library= create(:library)
@@ -54,7 +58,7 @@ VCR.turned_off do
           expect(library.latitude).to eq(coordinates[:lat])
           expect(library.longitude).to eq(coordinates[:lng])
         end
-
+   
         it 'returns an error if the coordinates cannot be fetched' do
           library = create(:library, latitude: nil, longitude: nil)
           allow_any_instance_of(GoogleMapsService).to receive(:get_coordinates).and_return(nil)

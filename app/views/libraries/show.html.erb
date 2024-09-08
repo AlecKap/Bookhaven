@@ -1,3 +1,13 @@
 <main class="container">
   <%= render 'library', library: @library %>
+
+  <div class="books">
+    <% @library.books.each do |book| %>
+      <%= link_to book_path(book) do %>
+        <div class="book">
+          <h2><%= book.title %></h2>
+          <p>By: <%= book.author %></p>
+        </div>
+      <% end %>
+    <% end %>
 </main>

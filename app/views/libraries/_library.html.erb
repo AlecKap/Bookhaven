@@ -10,6 +10,9 @@
   </div>
   
   <div class="directions_link">
-    <%= link_to "Get Directions", libraries_path %>
+    <%= link_to "Get Directions", 
+                "https://www.google.com/maps/dir/?api=1&destination=#{library.full_address}",
+                target: "_blank",
+                rel: "noopener noreferrer" %>
   </div>
 </div>

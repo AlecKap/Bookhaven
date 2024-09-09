@@ -1,0 +1,16 @@
+<main class="container">
+  <h1>Add a Book</h1>
+  <div class="book_form">
+    <%= form_with(model: @book, local: true) do |f| %>
+      <%= f.hidden_field :library_id, value: @library.id %>
+      <div class="field">
+        <%= f.label :isbn %> (10 or 13):
+        <%= f.text_field :isbn, placeholder: "1234567890" %>
+      </div>
+      <br>
+      <div class="actions">
+        <%= f.submit "Add Book", class: "btn btn--submit" %>
+      </div>
+    <% end %>
+  </div>
+</main>

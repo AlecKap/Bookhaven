@@ -1,18 +1,22 @@
-<div class="book_cover_image">
-  <img src="<%= @book.thumbnail_img %>">
-</div>
 <div class="book_details">
+  <div class="book_cover_image">
+  <img src="<%= @book.thumbnail_img %>">
+  </div>
   <div class="book_details_title">
     <%= @book.title %>
   </div>
   <div class="book_details_author">
     Author: <%= @book.author %>
   </div>
-  <div class="book_details_genre">
-    Genre: <%= @book.genre %>
-  </div>
-  <div class="book_details_description">
-    Description:
-    <p><%= @book.description %></p>
-  </div>
+  <% if @book.genre.present? %>
+    <div class="book_details_genre">
+      Genre: <%= @book.genre %>
+    </div>
+  <% end %>
+  <% if @book.description.present? %>
+    <div class="book_details_description">
+      Description:
+      <p><%= @book.description %></p>
+    </div>
+  <% end %>
 </div>

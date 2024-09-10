@@ -9,7 +9,7 @@ class Library < ApplicationRecord
   validates :latitude, presence: true
   validates :longitude, presence: true
 
-  before_create :update_coordinates
+  before_create :update_coordinates if -> { Rails.env.production? }
 
   def full_address
     "#{address}, #{city}, #{state} #{zip_code}"
@@ -24,7 +24,6 @@ class Library < ApplicationRecord
     coordinates = service.get_coordinates
     
     if coordinates.nil?
-      errors << 'Could not fetch coordinates.'
       puts 'Could not fetch coordinates.'
     else
       self.latitude = coordinates[:lat]

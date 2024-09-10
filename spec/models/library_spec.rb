@@ -25,7 +25,7 @@ VCR.turned_off do
 
       describe '#full_address' do
         it 'returns the full address of the library' do
-          library= create(:library)
+          library= create(:library, latitude: 40.015, longitude: -105.2705)
 
           expect(library.full_address).to eq("#{library.address}, #{library.city}, #{library.state} #{library.zip_code}")
         end
@@ -33,7 +33,7 @@ VCR.turned_off do
 
       describe '#number_of_books' do
         it 'returns the number of books in the library' do
-          library = create(:library)
+          library = create(:library, latitude: 40.015, longitude: -105.2705)
           book1 = create(:book)
           book2 = create(:book)
           library.books << book1
@@ -47,25 +47,32 @@ VCR.turned_off do
       end
 
       describe '#update_coordinates' do
-        it 'updates the latitude and longitude of the library upon creation' do
-          library = create(:library, latitude: nil, longitude: nil)
-          address = library.full_address
-          service = GoogleMapsService.new(address)
-          coordinates = service.get_coordinates
+        describe "happy path" do
+          it 'updates the latitude and longitude of the library upon creation' do
+            library = Library.create( name: "Lulu's little library",
+                                      address: "3605 W Berry Ave",
+                                      city: "Littleton",
+                                      state: "CO" )
+            address = library.full_address
+            service = GoogleMapsService.new(address)
+            coordinates = service.get_coordinates
+            library.update_coordinates
 
-          library.update_coordinates
-
-          expect(library.latitude).to eq(coordinates[:lat])
-          expect(library.longitude).to eq(coordinates[:lng])
+            expect(library.latitude).to eq(coordinates[:lat])
+            expect(library.longitude).to eq(coordinates[:lng])
+          end
         end
-   
-        it 'returns an error if the coordinates cannot be fetched' do
-          library = create(:library, latitude: nil, longitude: nil)
-          allow_any_instance_of(GoogleMapsService).to receive(:get_coordinates).and_return(nil)
 
-          library.update_coordinates
+        describe "sad path" do
+          it 'returns an error if the coordinates cannot be fetched' do
+            library = Library.create( name: "Sad Path Test Library", address: "mnlqwkdgft", city: "ktnmwqgb", state: "CO", latitude: nil, longitude: nil )
+            address = library.full_address
+            service = GoogleMapsService.new(address)
+            coordinates = service.get_coordinates
 
-          expect(library.errors.full_messages).to include('Could not fetch coordinates.')
+            expect(coordinates).to eq(nil)
+            expect(library.errors.full_messages).to include('Latitude can\'t be blank')
+          end
         end
       end
     end

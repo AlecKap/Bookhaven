@@ -6,6 +6,8 @@ class Library < ApplicationRecord
   validates :address, presence: true, length: { maximum: 100 }
   validates :city, presence: true, length: { maximum: 50 }
   validates :state, presence: true
+  validates :latitude, presence: true
+  validates :longitude, presence: true
 
   before_create :update_coordinates
 
@@ -21,13 +23,12 @@ class Library < ApplicationRecord
     service = GoogleMapsService.new(full_address)
     coordinates = service.get_coordinates
     
-    if coordinates
+    if coordinates.nil?
+      errors << 'Could not fetch coordinates.'
+      puts 'Could not fetch coordinates.'
+    else
       self.latitude = coordinates[:lat]
       self.longitude = coordinates[:lng]
-      save
-    else
-      errors.add(:base, 'Could not fetch coordinates.')
-      puts 'Could not fetch coordinates.'
     end
   end
 end

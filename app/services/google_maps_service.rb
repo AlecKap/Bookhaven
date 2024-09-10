@@ -4,10 +4,11 @@ class GoogleMapsService
   end
 
   def get_coordinates
-    if get_url("?address=#{@address}")[:results].empty?
+    response = get_url("?address=#{@address}")[:results]
+    if response.empty?
       nil
     else
-      get_url("?address=#{@address}")[:results].first[:geometry][:location]
+      response.first[:geometry][:location]
     end
   end
 

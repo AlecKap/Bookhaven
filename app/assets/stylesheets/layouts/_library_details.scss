@@ -1,0 +1,26 @@
+.library_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-right: var(--space-xs);
+  padding-left: var(--space-xs);
+  padding-bottom: var(--space-m);
+  padding-top: var(--space-xl);
+  margin-left: auto;
+  margin-right: auto;
+  gap: var(--space-xxs);
+  
+  &__library_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: var(--space-xs);
+    padding-left: var(--space-xs);
+    padding-bottom: var(--space-m);
+    padding-top: var(--space-xl);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

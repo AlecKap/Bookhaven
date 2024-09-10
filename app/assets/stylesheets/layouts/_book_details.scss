@@ -1,14 +1,8 @@
 .book_details {
   align-items: center;
   font-size: var(--font-size-xl);
-  background-color: var(--color-n-background);
-
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-small);
-
   margin: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
 
   display: flex;
   flex-direction: column;
@@ -24,7 +18,12 @@
   }
   
   &_description {
+    background-color: var(--color-n-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-small);
+    border: 1px solid #ccc;
     font-size: var(--font-size-xl);
+    padding: var(--space-l);
   }
 
   // future actions include adding to user library/bookshelf

@@ -1,6 +1,20 @@
 <main class="container">
-  <%= render 'library', library: @library %>
-
+  <div class="library_details">
+    <h1><%= @library.name %></h1>
+    <div class="directions_link">
+    <%= link_to "Get Directions", 
+                "https://www.google.com/maps/dir/?api=1&destination=#{@library.full_address}",
+                target: "_blank",
+                rel: "noopener noreferrer" %>
+  </div>
+    <h4>Number of books in this library: <%= @library.num_of_books %></h4>
+  </div>
+  <div class="add_book">
+    <%= link_to "Add a book to this Library", 
+                new_book_path(library_id: @library.id), 
+                class: 'btn btn--secondary' %>
+  </div>
+  <br>
   <div class="books">
     <% @library.books.each do |book| %>
       <%= link_to book_path(book) do %>

@@ -20,9 +20,9 @@ RSpec.describe GoogleBooksFacade do
        expect(book_details).to have_key(:sm_thumbnail_img)
 
        expect(book_details[:title]).to be_a(String)
-       expect(book_details[:author]).to be_a(Array)
+       expect(book_details[:author]).to be_a(String)
        expect(book_details[:description]).to be_a(String)
-       expect(book_details[:genre]).to be_a(Array)
+       expect(book_details[:genre]).to be_a(String)
        expect(book_details[:isbn_10]).to be_a(String)
        expect(book_details[:isbn_13]).to be_a(String)
        expect(book_details[:thumbnail_img]).to be_a(String)

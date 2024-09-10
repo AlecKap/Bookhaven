@@ -5,12 +5,6 @@ Book.destroy_all
 Library.destroy_all
 
 puts "Seeding Data"
-sleep(1)
-puts "."
-sleep(1)
-puts ".."
-sleep(1)
-puts "..."
 
 # Libraries
 
@@ -58,6 +52,8 @@ library_11 = Library.create(name: "Test Library",
 
 puts "11 Libraries Created"
 
+sleep(1)
+puts "."
 # Books
 
 book_1 = Book.create(title: Faker::Book.title, author: Faker::Book.author, genre: Faker::Book.genre, initial_rating: Faker::Number.between(from: 1, to: 5), description: Faker::Lorem.paragraph(sentence_count: 3), isbn_10: Faker::Code.isbn, isbn_13: Faker::Code.isbn, thumbnail_img: Faker::Avatar.image, sm_thumbnail_img: Faker::Avatar.image)
@@ -83,6 +79,8 @@ book_20 = Book.create(title: Faker::Book.title, author: Faker::Book.author, genr
 book_21 = Book.create(title: Faker::Book.title, author: Faker::Book.author, genre: Faker::Book.genre, initial_rating: Faker::Number.between(from: 1, to: 5), description: Faker::Lorem.paragraph(sentence_count: 3), isbn_10: Faker::Code.isbn, isbn_13: Faker::Code.isbn, thumbnail_img: Faker::Avatar.image, sm_thumbnail_img: Faker::Avatar.image)
 book_22 = Book.create(title: Faker::Book.title, author: Faker::Book.author, genre: Faker::Book.genre, initial_rating: Faker::Number.between(from: 1, to: 5), description: Faker::Lorem.paragraph(sentence_count: 3), isbn_10: Faker::Code.isbn, isbn_13: Faker::Code.isbn, thumbnail_img: Faker::Avatar.image, sm_thumbnail_img: Faker::Avatar.image)
 
+sleep(1)
+puts ".."
 puts "22 Books Created"
 
 # Library Books
@@ -102,5 +100,8 @@ LibraryBook.create(library_id: library_11.id, book_id: book_19.id, quality: Fake
 LibraryBook.create(library_id: library_10.id, book_id: book_20.id, quality: Faker::Number.between(from: 1, to: 5))
 LibraryBook.create(library_id: library_11.id, book_id: book_21.id, quality: Faker::Number.between(from: 1, to: 5))
 LibraryBook.create(library_id: library_11.id, book_id: book_22.id, quality: Faker::Number.between(from: 1, to: 5))
+
+sleep(1)
+puts "..."
 
 puts "22 LibraryBooks Created"

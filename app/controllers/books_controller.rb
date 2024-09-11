@@ -16,6 +16,7 @@ class BooksController < ApplicationController
     facade = GoogleBooksFacade.new(params[:book][:isbn])
     if facade.book_details.nil?
       flash[:error] = "Book not found"
+      redirect_to new_book_path(params[:book][:library_id])
     else
       book = Book.new(facade.book_details)
       book.save

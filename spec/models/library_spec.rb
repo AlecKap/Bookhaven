@@ -19,10 +19,6 @@ VCR.turned_off do
     end
 
     describe 'instance methods' do
-      # before :each do
-      #   sleep(1)
-      # end
-
       describe '#full_address' do
         it 'returns the full address of the library' do
           library= create(:library, latitude: 40.015, longitude: -105.2705)
@@ -49,28 +45,21 @@ VCR.turned_off do
       describe '#update_coordinates' do
         describe "happy path" do
           it 'updates the latitude and longitude of the library upon creation' do
+            allow_any_instance_of(GoogleMapsService).to receive(:get_coordinates).and_return({ lat: 39.7392, lng: -104.9903 })
             library = Library.create( name: "Lulu's little library",
                                       address: "3605 W Berry Ave",
                                       city: "Littleton",
                                       state: "CO" )
-            address = library.full_address
-            service = GoogleMapsService.new(address)
-            coordinates = service.get_coordinates
-            library.update_coordinates
-
-            expect(library.latitude).to eq(coordinates[:lat])
-            expect(library.longitude).to eq(coordinates[:lng])
+            expect(library.latitude).to eq(39.7392)
+            expect(library.longitude).to eq(-104.9903)
           end
         end
 
         describe "sad path" do
           it 'returns an error if the coordinates cannot be fetched' do
-            library = Library.create( name: "Sad Path Test Library", address: "mnlqwkdgft", city: "ktnmwqgb", state: "CO", latitude: nil, longitude: nil )
-            address = library.full_address
-            service = GoogleMapsService.new(address)
-            coordinates = service.get_coordinates
+            allow_any_instance_of(GoogleMapsService).to receive(:get_coordinates).and_return(nil)
+            library = Library.create( name: "Sad Path Test Library", address: "3605 W Berry Ave", city: "Littleton", state: "CO", latitude: nil, longitude: nil )
 
-            expect(coordinates).to eq(nil)
             expect(library.errors.full_messages).to include('Latitude can\'t be blank')
           end
         end
